@@ -64,7 +64,7 @@
     grid.innerHTML = items.map(function(p) {
       var imgHtml;
       if (p.image) {
-        imgHtml = '<img src="images/' + p.image + '" alt="' + p.name + '">';
+        imgHtml = '<img style="width:100%;height:100%;object-fit:contain;padding:16px;display:block;background:#fff;" src="images/' + p.image + '" alt="' + p.name + '">';
       } else {
         imgHtml = '<svg viewBox="0 0 200 200" width="140" height="140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 100 Q60 60 100 60 Q140 60 140 100 Q140 140 100 140 Q60 140 60 100Z" stroke="#c4a35a" stroke-width="3" fill="rgba(196,163,90,0.08)"/><rect x="62" y="85" width="76" height="30" rx="4" stroke="#c4a35a" stroke-width="2" fill="rgba(196,163,90,0.05)"/><circle cx="100" cy="80" r="6" stroke="#c4a35a" stroke-width="1.5" fill="rgba(196,163,90,0.1)"/><text x="100" y="105" text-anchor="middle" font-size="11" fill="#c4a35a" font-family="Inter,sans-serif" font-weight="600">HANDLE</text></svg>';
       }
