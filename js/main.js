@@ -11,6 +11,7 @@
     { id: 'SS-005', name: 'SS Tubular Latch Handle', desc: 'For tubular locks, reversible, suitable for interior doors', category: 'stainless-steel', catLabel: 'Stainless Steel', material: 'SS304' },
     { id: 'SS-006', name: 'SS Paddle Handle', desc: 'Wide paddle design, push-pull action, ideal for commercial use', category: 'stainless-steel', catLabel: 'Stainless Steel', material: 'SS316' },
     { id: 'SS-007', name: 'SS Straight Lever Handle', desc: 'Classic straight lever, durable stainless, powder-coated option', category: 'stainless-steel', catLabel: 'Stainless Steel', material: 'SS304' },
+    { id: 'SS-008', name: 'SS Square Rose Lever Handle', desc: '304 stainless steel, rectangular rose plate, brushed satin finish, durable spring mechanism', category: 'stainless-steel', catLabel: 'Stainless Steel', material: 'SS304', image: 'product-handle-01.png' },
 
     // Zinc Alloy
     { id: 'ZA-001', name: 'Zinc Alloy Lever Handle', desc: 'Die-cast zinc alloy, chrome plated, smooth action', category: 'zinc-alloy', catLabel: 'Zinc Alloy', material: 'Zinc Alloy' },
@@ -61,30 +62,21 @@
     const items = category === 'all' ? products : products.filter(function(p) { return p.category === category; });
 
     grid.innerHTML = items.map(function(p) {
-      return [
-        '<div class="product-card" data-category="' + p.category + '">',
-          '<div class="product-card-image">',
-            '<div class="placeholder-img">',
-              '<svg viewBox="0 0 200 200" width="140" height="140" fill="none" xmlns="http://www.w3.org/2000/svg">',
-                '<path d="M60 100 Q60 60 100 60 Q140 60 140 100 Q140 140 100 140 Q60 140 60 100Z" stroke="#c4a35a" stroke-width="3" fill="rgba(196,163,90,0.08)"/>',
-                '<rect x="62" y="85" width="76" height="30" rx="4" stroke="#c4a35a" stroke-width="2" fill="rgba(196,163,90,0.05)"/>',
-                '<circle cx="100" cy="80" r="6" stroke="#c4a35a" stroke-width="1.5" fill="rgba(196,163,90,0.1)"/>',
-                '<text x="100" y="105" text-anchor="middle" font-size="11" fill="#c4a35a" font-family="Inter,sans-serif" font-weight="600">HANDLE</text>',
-              '</svg>',
-            '</div>',
-          '</div>',
-          '<div class="product-card-body">',
+      var imgHtml;
+      if (p.image) {
+        imgHtml = '<img src="images/' + p.image + '" alt="' + p.name + '">';
+      } else {
+        imgHtml = '<svg viewBox="0 0 200 200" width="140" height="140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 100 Q60 60 100 60 Q140 60 140 100 Q140 140 100 140 Q60 140 60 100Z" stroke="#c4a35a" stroke-width="3" fill="rgba(196,163,90,0.08)"/><rect x="62" y="85" width="76" height="30" rx="4" stroke="#c4a35a" stroke-width="2" fill="rgba(196,163,90,0.05)"/><circle cx="100" cy="80" r="6" stroke="#c4a35a" stroke-width="1.5" fill="rgba(196,163,90,0.1)"/><text x="100" y="105" text-anchor="middle" font-size="11" fill="#c4a35a" font-family="Inter,sans-serif" font-weight="600">HANDLE</text></svg>';
+      }
+      return ['<div class="product-card" data-category="' + p.category + '">','<div class="product-card-image"><div class="placeholder-img">' + imgHtml + '</div></div>','<div class="product-card-body"><div class="product-card-category">' + p.catLabel + '</div><h3>' + p.name + '</h3><p>' + p.desc + '</p><div class="product-card-footer"><span class="product-ref">' + p.id + ' | ' + p.material + '</span><span class="product-inquire">Inquire &rarr;</span></div></div></div>'
+      ].join('\n');
+    });
             '<div class="product-card-category">' + p.catLabel + '</div>',
             '<h3>' + p.name + '</h3>',
             '<p>' + p.desc + '</p>',
             '<div class="product-card-footer">',
               '<span class="product-ref">' + p.id + ' | ' + p.material + '</span>',
               '<span class="product-inquire">Inquire &rarr;</span>',
-            '</div>',
-          '</div>',
-        '</div>'
-      ].join('\n');
-    }).join('\n');
 
     // click to inquire
     Array.from(document.querySelectorAll('.product-card')).forEach(function(card) {
@@ -95,7 +87,6 @@
         document.getElementById('message').value = 'Hi, I am interested in product ' + ref + ' - ' + name + '. Please send me details and quotation.';
       });
     });
-  }
 
   renderProducts('all');
 
