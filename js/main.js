@@ -71,13 +71,6 @@
       return ['<div class="product-card" data-category="' + p.category + '">','<div class="product-card-image"><div class="placeholder-img">' + imgHtml + '</div></div>','<div class="product-card-body"><div class="product-card-category">' + p.catLabel + '</div><h3>' + p.name + '</h3><p>' + p.desc + '</p><div class="product-card-footer"><span class="product-ref">' + p.id + ' | ' + p.material + '</span><span class="product-inquire">Inquire &rarr;</span></div></div></div>'
       ].join('\n');
     });
-            '<div class="product-card-category">' + p.catLabel + '</div>',
-            '<h3>' + p.name + '</h3>',
-            '<p>' + p.desc + '</p>',
-            '<div class="product-card-footer">',
-              '<span class="product-ref">' + p.id + ' | ' + p.material + '</span>',
-              '<span class="product-inquire">Inquire &rarr;</span>',
-
     // click to inquire
     Array.from(document.querySelectorAll('.product-card')).forEach(function(card) {
       card.addEventListener('click', function() {
@@ -87,6 +80,7 @@
         document.getElementById('message').value = 'Hi, I am interested in product ' + ref + ' - ' + name + '. Please send me details and quotation.';
       });
     });
+  }
 
   renderProducts('all');
 
