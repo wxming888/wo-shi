@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8e0d0"/><stop offset="50%" stop-color="#d4c9b3"/><stop offset="100%" stop-color="#c4b89e"/>
+    </linearGradient>
+    <linearGradient id="metalDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c4a35a"/><stop offset="50%" stop-color="#d4b86a"/><stop offset="100%" stop-color="#b89840"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f2eb"/><stop offset="100%" stop-color="#eae5db"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)" rx="8"/>
+  <rect x="100" y="120" width="200" height="160" rx="12" fill="url(#metal)" stroke="#b8a88a" stroke-width="2"/>
+  <rect x="110" y="130" width="180" height="140" rx="8" fill="none" stroke="#d0c5ad" stroke-width="1"/>
+  <circle cx="120" cy="140" r="6" fill="#d8cdb5" stroke="#b8a88a" stroke-width="1"/>
+  <circle cx="280" cy="140" r="6" fill="#d8cdb5" stroke="#b8a88a" stroke-width="1"/>
+  <circle cx="120" cy="260" r="6" fill="#d8cdb5" stroke="#b8a88a" stroke-width="1"/>
+  <circle cx="280" cy="260" r="6" fill="#d8cdb5" stroke="#b8a88a" stroke-width="1"/>
+  <circle cx="200" cy="250" r="35" fill="url(#metalDark)" stroke="#a0803a" stroke-width="2"/>
+  <circle cx="200" cy="250" r="25" fill="#dcc070" stroke="#b89840" stroke-width="1.5"/>
+  <line x1="200" y1="225" x2="200" y2="140" stroke="#c4a35a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="200" y1="140" x2="240" y2="120" stroke="#c4a35a" stroke-width="10" stroke-linecap="round"/>
+  <rect x="194" y="260" width="12" height="18" rx="6" fill="#8a7030"/>
+  <circle cx="200" cy="265" r="5" fill="#6a5020"/>
+  <text x="200" y="380" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#b89840" font-weight="600">BACKPLATE ASSEMBLY</text>
+</svg>

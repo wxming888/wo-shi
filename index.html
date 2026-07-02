@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.v7.css">
 </head>
 <body>
 
@@ -16,14 +16,12 @@
 <nav class="navbar" id="navbar">
 <div class="container nav-container">
 <a href="#hero" class="logo">
-<span class="logo-icon">&#9670;</span>
-<span class="logo-text">LISHUI XITIAN</span>
-<span class="logo-sub">TECHNOLOGY</span>
+<img src="images/logo.jpg" alt="LISHUI XITIAN TECHNOLOGY" style="height:42px;width:auto;">
 </a>
 <div class="nav-links" id="navLinks">
 <a href="#hero">Home</a>
-<a href="#about">About</a>
 <a href="#products">Products</a>
+<a href="#about">About</a>
 <a href="#why-us">Why Us</a>
 <a href="#contact">Contact</a>
 </div>
@@ -58,6 +56,26 @@
 <span class="stat-number" data-target="18">0</span>
 <span class="stat-label">Years Experience</span>
 </div>
+</div>
+</div>
+</section>
+
+<!-- Products Section -->
+<section class="section products" id="products">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Product Catalog</span>
+<h2>Our Product Range</h2>
+<p>Browse our extensive catalog of door handles and hardware fittings. Click on any product to inquire.</p>
+</div>
+<div class="product-filters" id="productFilters">
+<button class="filter-btn active" data-filter="all">All Products</button>
+ <button class="filter-btn" data-filter="modern">Door Handles</button>
+  <button class="filter-btn" data-filter="backplates">Backplates</button>
+<button class="filter-btn" data-filter="pull">Lock Bodies</button>
+</div>
+<div class="product-grid" id="productGrid">
+<!-- Products injected by JS -->
 </div>
 </div>
 </section>
@@ -101,29 +119,6 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</section>
-
-<!-- Products Section -->
-<section class="section products" id="products">
-<div class="container">
-<div class="section-header">
-<span class="section-tag">Product Catalog</span>
-<h2>Our Product Range</h2>
-<p>Browse our extensive catalog of door handles and hardware fittings. Click on any product to inquire.</p>
-</div>
-<div class="product-filters" id="productFilters">
-<button class="filter-btn active" data-filter="all">All Products</button>
-<button class="filter-btn" data-filter="stainless-steel">Stainless Steel</button>
-<button class="filter-btn" data-filter="zinc-alloy">Zinc Alloy</button>
-<button class="filter-btn" data-filter="brass">Brass</button>
-<button class="filter-btn" data-filter="modern">Modern</button>
-<button class="filter-btn" data-filter="classic">Classic</button>
-<button class="filter-btn" data-filter="pull">Pull Handles</button>
-</div>
-<div class="product-grid" id="productGrid">
-<!-- Products injected by JS -->
 </div>
 </div>
 </section>
@@ -239,12 +234,10 @@
 <label for="product-interest">Product Interest</label>
 <select id="product-interest" name="product-interest">
 <option value="">Select a category...</option>
-<option value="stainless-steel">Stainless Steel Handles</option>
-<option value="zinc-alloy">Zinc Alloy Handles</option>
-<option value="brass">Brass Handles</option>
-<option value="modern">Modern Handles</option>
-<option value="classic">Classic Handles</option>
-<option value="pull">Pull Handles</option>
+<option value="modern">Door Handles</option>
+ <option value="backplates">Backplates</option>
+<option value="pull">Lock Bodies</option>
+<option value="backplate">Backplate &amp; Lock Body</option>
 <option value="other">Other / Custom</option>
 </select>
 </div>
@@ -263,22 +256,22 @@
 <div class="container">
 <div class="footer-grid">
 <div class="footer-brand">
-<span class="logo-text">LISHUI XITIAN</span>
+<img src="images/logo.jpg" alt="LISHUI XITIAN TECHNOLOGY" style="height:36px;width:auto;margin-bottom:12px;">
 <p>Professional manufacturer and exporter of premium door handles and architectural hardware since 2005.</p>
 </div>
 <div class="footer-links">
 <h4>Quick Links</h4>
 <a href="#hero">Home</a>
-<a href="#about">About Us</a>
 <a href="#products">Products</a>
+<a href="#about">About Us</a>
 <a href="#contact">Contact</a>
 </div>
 <div class="footer-links">
 <h4>Products</h4>
-<a href="#products" data-filter="stainless-steel">Stainless Steel Handles</a>
-<a href="#products" data-filter="zinc-alloy">Zinc Alloy Handles</a>
-<a href="#products" data-filter="brass">Brass Handles</a>
-<a href="#products" data-filter="modern">Modern Handles</a>
+<a href="#products" data-filter="modern">Door Handles</a>
+ <a href="#products" data-filter="backplates">Backplates</a>
+<a href="#products" data-filter="pull">Lock Bodies</a>
+<a href="#products" data-filter="backplate">Backplate &amp; Lock Body</a>
 </div>
 <div class="footer-contact">
 <h4>Contact</h4>
@@ -293,6 +286,6 @@
 </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.v6.js"></script>
 </body>
 </html>
